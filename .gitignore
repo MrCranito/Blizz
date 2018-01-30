@@ -1,0 +1,43 @@
+#NODE APP
+node_modules
+
+# Built application files
+/android_app/*/build/
+
+# Crashlytics configuations
+/android_app/com_crashlytics_export_strings.xml
+
+# Local configuration file (sdk path, etc)
+/android_app/qrcodesample/local.properties
+
+# Gradle generated files
+/android_app/qrcodesample/.gradle/
+
+# Signing files
+/android_app/qrcodesample/.signing/
+
+# User-specific configurations
+/android_app/qrcodesample/.idea/libraries/
+/android_app/qrcodesample/.idea/workspace.xml
+/android_app/qrcodesample/.idea/tasks.xml
+/android_app/qrcodesample/.idea/.name
+/android_app/qrcodesample/.idea/compiler.xml
+/android_app/qrcodesample/.idea/copyright/profiles_settings.xml
+/android_app/qrcodesample/.idea/encodings.xml
+/android_app/qrcodesample/.idea/misc.xml
+/android_app/qrcodesample/.idea/modules.xml
+/android_app/qrcodesample/.idea/scopes/scope_settings.xml
+/android_app/qrcodesample/.idea/vcs.xml
+/android_app/qrcodesample/*.iml
+
+# OS-specific files
+/android_app/qrcodesample/.DS_Store
+/android_app/qrcodesample/.DS_Store?
+/android_app/qrcodesample/._*
+/android_app/qrcodesample/.Spotlight-V100
+/android_app/qrcodesample/.Trashes
+/android_app/qrcodesample/ehthumbs.db
+/android_app/qrcodesample/Thumbs.db
+
+#logs
+logs

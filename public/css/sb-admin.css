@@ -1,0 +1,32 @@
+button{
+	margin-top: 20px;
+	width: 300px;
+}
+
+.widthed{
+	width: 300px;
+}
+
+
+.overwatch{
+	border : solid 2px yellow;
+}
+
+.d3{
+	border : solid 2px red;
+}
+
+.starcraft{
+	border: solid 2px blue;
+}
+
+.wow{
+	border : solid 2px orange;
+}
+
+.heroes{
+	border : solid 2px black;
+}
+.container h2,h4{
+	color : black;
+}

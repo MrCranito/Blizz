@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="HTOS">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>HTOS STATS</title>
+  <!-- Bootstrap core CSS-->
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+  <link href="css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer" id="page-top" ng-controller="MainController">
+  <!-- Navigation-->
+ <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Blizzard Stats</a>
+        <a class="btn btn-primary widthed" href="#">Sign In</a>
+      </div>
+    </nav>
+
+
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Entrez votre BattleTag et récuperer vos infos !</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+              <h4>Pour Tester L'app Voici Mon BattleTag : BattleName : JunKJusty BattleID = #2854 Sois BattleTag = JunKJusty#2854</h4>
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <input ng-model="battletagName" type="text" class="form-control form-control-lg" placeholder="Enter your battletagName">
+                  <input ng-model="battletagID" type="text" class="form-control form-control-lg" placeholder="Enter your battletagID">
+                  <select ng-model="localRegion"> 
+                          <option value="fr_Fr"> FR </option>
+                          <option value="en_EN"> EN</option>
+
+
+                 </select>
+                 <select ng-model="Region"> 
+                          <option value="2"> EU </option>
+                          <option value="1"> US </option>
+                          <option value="3"> KR</option>
+
+
+                 </select>
+                </div>
+            <div class="container heroes">
+                <h2> Heroes</h2>
+                <div class="col-12 ">
+                  <button ng-click="HTOSplayerData()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Heroes Of Storm Player All</button>
+                </div>
+              
+
+
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="HTOSallHeroes()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Heroes Of Storm Data Heroes</button>
+                </div>
+              </div>
+
+
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="HTOSallMaps()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Heroes Of Storm Data Maps</button>
+                </div>
+              </div>
+            </div>
+            <div class="container wow">
+              <h2> WOW </h2>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <input ng-model="serverWOW" type="text" class="form-control form-control-lg" placeholder="Enter your Server">
+                  <input ng-model="heronameWoW" type="text" class="form-control form-control-lg" placeholder="Enter your Hero's Name">
+                  <button ng-click="WOWPlayerData()" type="submit" class="btn btn-block btn-lg btn-primary widthed">WOW Player Data </button>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="WOWPlayerDataPlayerAchievement()" type="submit" class="btn btn-block btn-lg btn-primary widthed">WOW Player Achievement </button>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="WOWPlayerGuild()" type="submit" class="btn btn-block btn-lg btn-primary widthed">WOW Player Guild </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="container d3">
+              <h2> DIablo 3</h2>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="D3allDataPlayer()" type="submit" class="btn btn-block btn-lg btn-primary widthed"> D3 Data Player </button>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="D3DataByHeroes()" type="submit" class="btn btn-block btn-lg btn-primary widthed">D3 Player Heroes </button>
+                </div>
+              </div>
+            </div>
+            <div class="container starcraft">
+              <h2> Starcraft</h2>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="STC2ProfilPlayer()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Starcraft 2 Player Data</button>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="STC2PlayerMatchHistory()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Starcraft 2 Match History</button>
+                </div>
+              </div>
+
+
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="STC2ProfilPlayer()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Starcraft 2 Player Data</button>
+                </div>
+              </div>
+            </div>
+          <div class="container overwatch">
+            <h2> Overwatch</h2>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="OVWTPlayerData()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Overwatch Player Data</button>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="OVWTPlayerStat()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Overwatch Player Stats</button>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  
+                </div>
+                <div class="col-12 ">
+                  <button ng-click="OVWTPlayersStatsHeroes()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Overwatch Player Data By Heroes</button>
+                </div>
+              </div>
+            
+          </div>
+              
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-screen-desktop m-auto text-primary widthed"></i>
+              </div>
+              <h3>Fully Responsive</h3>
+              <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-layers m-auto text-primary widthed"></i>
+              </div>
+              <h3>Bootstrap 4 Ready</h3>
+              <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-check m-auto text-primary widthed"></i>
+              </div>
+              <h3>Easy to Use</h3>
+              <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Contact</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-twitter fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-instagram fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>
+    
+  <script type="text/javascript" src="js/angular.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    
+     <script src="js/controllers/mainCtrl.js"></script>
+     <script type="text/javascript" src="js/core.js" script>
+
+  
+
