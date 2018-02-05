@@ -12,6 +12,7 @@ function MainController($scope, $http) {
     $scope.HTOSallHeroesArray = [];
     $scope.HTOSallMapsArray = [];
     var Array=[];
+    $scope.value = true;
 
 
 
@@ -19,15 +20,15 @@ function MainController($scope, $http) {
 
    $scope.HTOSallHeroes = function () {
     console.log("clicked");
-    
-        $http.get('https://api.hotslogs.com/Public/Data/Heroes').then((result) =>{
-            console.log("allheroes=>>>>>>"+JSON.stringify(result));
+        $http.get('https://api.hotslogs.com/Public/Data/Heroes').then((result)=>{
             result.data.forEach(element => {
                 Array.push(element);
             });
-            $scope.HTOSallHeroesArray = Array;
-            console.log($scope.HTOSallHeroes);
-            },(err)=>{
+            $scope.HTOSallMapsArray = Array;
+            $scope.value = false;
+
+            $scope.HTOSArray = Array;
+            },(err) =>{
                 
                 if (err.code === 'AUTHENTICATION_FAILURE') {
                     swal('', 'Invalid credentials');
@@ -37,6 +38,7 @@ function MainController($scope, $http) {
                 }
 
             });
+        
     };
     $scope.HTOSallMaps = function () {
     console.log("clicked");
@@ -61,10 +63,7 @@ function MainController($scope, $http) {
     };
     $scope.HTOSplayerData = function () {
     console.log("clicked");
-    if($scope.battletagName && $scope.battletagID){
-        $scope.battletag = $scope.battletagName+'_'+$scope.battletagID;
-    }
-        $http.get('https://api.hotslogs.com/Public/Players/'+$scope.Region+'/'+$scope.battletag+'').then((result) =>{
+        $http.get('/index/PlayerChampionsMasteries').then((result) =>{
             console.log(JSON.stringify(result));
             },(err)=>{
                 

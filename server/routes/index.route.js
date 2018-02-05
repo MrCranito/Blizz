@@ -1,7 +1,7 @@
 var express = require('express');
 module.exports.publicRoutes = function(){
 	var router = express.Router();
-
+	var Array =[];
 	return router;
 }
 

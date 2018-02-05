@@ -9,6 +9,11 @@ header {
     letter-spacing: 5px;
 }
 
+.card{
+	color: black;
+	float: left ! important;
+}
+
 .sing-in {
 	background-color: #f8f9fa;
 	color: black;

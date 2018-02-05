@@ -59,6 +59,7 @@
 
                  </select>
                 </div>
+          <div class="container" ng-if="value">
             <div class="col-sm-13 col-md-12 col-lg-6 col-xl-4 heroes">
               <div class="game-container">
                 <h2> Heroes</h2>
@@ -215,10 +216,24 @@
               </div>
             </div>
           </div>
-              
-
+        </div>
+        
             </form>
+        
           </div>
+        </div>
+        <div class="col-4" ng-if="!value" ng-repeat="item in HTOSArray">
+            <div class="card" style="width: 20rem;">
+                <!--<img class="card-img-top" alt="Card image cap">-->
+                <div class="card-block">
+                  <h4 class="card-title">{{ item.PrimaryName }}</h4>
+                  
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{ item.Group}}</li>
+                  
+                </ul>
+              </div>
         </div>
       </div>
     </header>
