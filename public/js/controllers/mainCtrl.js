@@ -8,7 +8,11 @@ angular
 
 function MainController($scope, $http) {
 
-    var heroesArray=[]; // All Data get from Maps
+    var heroesArray=[]; // All Data get from Maps;
+    $scope.HTOSallHeroes = [];
+    $scope.HTOSallMaps = null;
+    var Array=[];
+
 
 
     // Heroes Of the Storm Infos
@@ -18,6 +22,11 @@ function MainController($scope, $http) {
     
         $http.get('https://api.hotslogs.com/Public/Data/Heroes').then((result) =>{
             console.log("allheroes=>>>>>>"+JSON.stringify(result));
+            result.data.forEach(element => {
+                Array.push(element);
+            });
+            $scope.HTOSallHeroes = Array;
+            console.log($scope.HTOSallHeroes);
             },(err)=>{
                 
                 if (err.code === 'AUTHENTICATION_FAILURE') {
@@ -31,8 +40,14 @@ function MainController($scope, $http) {
     };
     $scope.HTOSallMaps = function () {
     console.log("clicked");
+        Array = [];
         $http.get('https://api.hotslogs.com/Public/Data/Maps').then((result) =>{
             console.log("allmaps=>>>>>>>>>>"+JSON.stringify(result));
+            result.data.forEach(element => {
+                Array.push(element);
+            });
+            $scope.HTOSallMaps = Array;
+            console.log($scope.HTOSallMaps);
             },(err)=>{
                 
                 if (err.code === 'AUTHENTICATION_FAILURE') {
