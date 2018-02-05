@@ -1,3 +1,25 @@
+header {
+	background-color: navy;
+}
+
+.navbar-brand {
+	MARGIN: 0 AUTO;
+    FONT-SIZE: 30PX;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.sing-in {
+	background-color: #f8f9fa;
+	color: black;
+	border : none;
+    FONT-SIZE: 30PX;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.sing-in:hover {
+	background-color: rgb(201, 201, 201);
+}
 button{
 	margin-top: 20px;
 	width: 300px;
@@ -5,28 +27,25 @@ button{
 
 .widthed{
 	width: 300px;
+	margin: 0 auto;
 }
 
-
-.overwatch{
-	border : solid 2px yellow;
-}
-
-.d3{
-	border : solid 2px red;
-}
-
-.starcraft{
-	border: solid 2px blue;
-}
-
-.wow{
-	border : solid 2px orange;
-}
-
-.heroes{
-	border : solid 2px black;
-}
-.container h2,h4{
+.game-container {
+	margin: 20px;
+	height: 350px;
+	border-radius: 20px;
+	box-shadow: 10px 5px 40px 0px rgba(117, 117, 117,0.28);
+	border: 1px solid black !important;
 	color : black;
+	background-color: white;
+
+}
+
+.game-container > .form-row > .col-12 > button, .game-container > .col-12 > button  {
+	margin: 0 auto;
+	background-color: white;
+	color: navy;
+	width: 90%;
+	font-size : 90%;
+	margin-top : 17px;
 }
