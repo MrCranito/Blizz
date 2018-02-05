@@ -9,8 +9,8 @@ angular
 function MainController($scope, $http) {
 
     var heroesArray=[]; // All Data get from Maps;
-    $scope.HTOSallHeroes = [];
-    $scope.HTOSallMaps = null;
+    $scope.HTOSallHeroesArray = [];
+    $scope.HTOSallMapsArray = [];
     var Array=[];
 
 
@@ -25,7 +25,7 @@ function MainController($scope, $http) {
             result.data.forEach(element => {
                 Array.push(element);
             });
-            $scope.HTOSallHeroes = Array;
+            $scope.HTOSallHeroesArray = Array;
             console.log($scope.HTOSallHeroes);
             },(err)=>{
                 
@@ -46,7 +46,7 @@ function MainController($scope, $http) {
             result.data.forEach(element => {
                 Array.push(element);
             });
-            $scope.HTOSallMaps = Array;
+            $scope.HTOSallMapsArray = Array;
             console.log($scope.HTOSallMaps);
             },(err)=>{
                 
