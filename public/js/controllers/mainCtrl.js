@@ -8,8 +8,7 @@ angular
 
 function MainController($scope, $http) {
 
-    var heroesArray=[]; // All Data get from Ma
-
+    var heroesArray=[]; // All Data get from Maps
 
 
     // Heroes Of the Storm Infos
