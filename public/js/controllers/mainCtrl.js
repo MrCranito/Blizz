@@ -12,23 +12,23 @@ function MainController($scope, $http) {
     $scope.HTOSallHeroesArray = [];
     $scope.HTOSallMapsArray = [];
     var Array=[];
+
     $scope.value = true;
-
-
 
     // Heroes Of the Storm Infos
 
    $scope.HTOSallHeroes = function () {
     console.log("clicked");
-        $http.get('https://api.hotslogs.com/Public/Data/Heroes').then((result)=>{
+    
+        $http.get('https://api.hotslogs.com/Public/Data/Heroes').then((result) =>{
             result.data.forEach(element => {
                 Array.push(element);
             });
             $scope.HTOSallMapsArray = Array;
-            $scope.value = false;
-
             $scope.HTOSArray = Array;
-            },(err) =>{
+            $scope.value = false;
+            console.log($scope.HTOSArray);
+            },(err)=>{
                 
                 if (err.code === 'AUTHENTICATION_FAILURE') {
                     swal('', 'Invalid credentials');
@@ -38,7 +38,6 @@ function MainController($scope, $http) {
                 }
 
             });
-        
     };
     $scope.HTOSallMaps = function () {
     console.log("clicked");
