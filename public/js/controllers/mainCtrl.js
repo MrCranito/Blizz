@@ -112,8 +112,12 @@ function MainController($scope, $http) {
     };
     $scope.HTOSplayerData = function () {
     console.log("clicked");
-        $http.get('/index/PlayerChampionsMasteries').then((result) =>{
-            console.log(JSON.stringify(result));
+    Array = [];
+        $http.get('https://api.hotslogs.com/Public/Players/2/JunKJusty_2854').then((result) =>{
+            $scope.PersonnalData = result.data;
+            console.log($scope.PersonnalData);
+            $('#Dashboard').css("display","none");
+            $('#Personnal').css("display","block");
             },(err)=>{
                 
                 if (err.code === 'AUTHENTICATION_FAILURE') {
