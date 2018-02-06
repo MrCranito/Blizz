@@ -32,6 +32,29 @@ function MainController($scope, $http) {
             
             Array.forEach((row)=>{
                     row.icon_url = row.icon_url["92x93"];
+                    switch(row.name){
+                        case "Junkrat":
+                        row.icon_url = "/img/Junkrat.jpg";
+                        break;
+                        case "Alexstrasza":
+                        row.icon_url = "/img/Alexstrasza.jpg";
+                        break;
+                        case "Zul'jin":
+                        row.icon_url = "/img/Zul'jin.png";
+                        break;
+                        case "The Butcher":
+                        row.icon_url = "/img/The Butcher.jpg";
+                        break;
+                        case "Hanzo":
+                        row.icon_url = "/img/Hanzo.png";
+                        break;
+                        case "Maiev":
+                        row.icon_url = "/img/Maiev.png";
+                        break;
+                        case "Blaze":
+                        row.icon_url = "/img/Blaze.png";
+                        break;
+                    }
             });
             $scope.HTOSArray = Array;
             //var test = $scope.HTOSArray.talents;
