@@ -222,6 +222,7 @@
         
           </div>
         </div>
+        <div class="container" ng-if="!value" id="value">
         <div class="col-4" ng-if="!value" ng-repeat="item in HTOSArray">
             <div class="card" style="width: 20rem;" id="{{item.Group}}">
                 <!--<img class="card-img-top" alt="Card image cap">-->
@@ -233,6 +234,21 @@
                       <button ng-click="parseJSONhero(choose)" ng-repeat="choose in ArrayChooseHero"> {{choose}} </button>
           
             </div>
+          <div class="col-4" ng-repeat="item in HTOSArray">
+              <div class="card {{item.role}}" ng-click="detailHero(item.name)" style="width: 20rem;" >
+                  <!--<img class="card-img-top" alt="Card image cap">-->
+                  <div class="card-block">
+                    <img class="card-img-top" ng-if="item.icon_url" src="{{ item.icon_url }}">
+                    <h4 class="card-title">{{ item.name }}</h4>
+                    
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" ng-if="item.role">{{ item.role }}</li>
+                    
+                  </ul>
+                </div>
+          </div>
+        </div>
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">{{ item.Group}}</li>
