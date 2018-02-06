@@ -13,21 +13,31 @@ function MainController($scope, $http) {
     $scope.HTOSallMapsArray = [];
     var Array=[];
 
-    $scope.value = true;
+    $scope.value = "Dashboard";
+
+    $scope.ArrayChooseHero =["Assassin",
+                            "Warrior",
+                            "Support",
+                            "Specialist"];
 
     // Heroes Of the Storm Infos
 
    $scope.HTOSallHeroes = function () {
     console.log("clicked");
     
-        $http.get('https://api.hotslogs.com/Public/Data/Heroes').then((result) =>{
+        $http.get('https://hotsapi.net/api/v1/heroes').then((result) =>{
             result.data.forEach(element => {
                 Array.push(element);
             });
-            $scope.HTOSallMapsArray = Array;
+            
+            Array.forEach((row)=>{
+                    row.icon_url = row.icon_url["92x93"];
+            });
             $scope.HTOSArray = Array;
+            //var test = $scope.HTOSArray.talents;
+            //$scope.HTOSArray.icon_url = $scope.HTOSArray.talents.icon_url["92x93"];
+       
             $scope.value = false;
-            console.log($scope.HTOSArray);
             },(err)=>{
                 
                 if (err.code === 'AUTHENTICATION_FAILURE') {
