@@ -93,12 +93,11 @@ function MainController($scope, $http) {
     console.log("clicked");
         Array = [];
         $http.get('https://api.hotslogs.com/Public/Data/Maps').then((result) =>{
-            console.log("allmaps=>>>>>>>>>>"+JSON.stringify(result));
-            result.data.forEach(element => {
-                Array.push(element);
-            });
-            $scope.HTOSallMapsArray = Array;
-            console.log($scope.HTOSallMaps);
+            $scope.Maps = result.data;
+            console.log(result.data);
+            $('#Dashboard').css("display","none");
+            $('#Personnal').css("display","none");
+            $('#Maps').css("display","block");
             },(err)=>{
                 
                 if (err.code === 'AUTHENTICATION_FAILURE') {
