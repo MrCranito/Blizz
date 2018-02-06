@@ -39,6 +39,33 @@ function MainController($scope, $http) {
 
             });
     };
+    $scope.detailHero = function(HeroAskedForDeatils){
+        Array=[];
+        $http.get('https://hotsapi.net/api/v1/heroes/'+HeroAskedForDeatils+'').then((result) =>{
+            $scope.DetailsHero = result.data;
+            $scope.DetailsHero.icon_url= $scope.DetailsHero.icon_url["92x93"];
+            Array = $scope.DetailsHero.talents;
+             Array.forEach((row)=>{
+                    row.icon_url = row.icon_url["64x64"];
+            });
+            $scope.DetailsHero.talents = Array;
+            console.log($scope.DetailsHero);
+            $('#Personnal').css("display","none");
+            $('#Maps').css("display","none");
+            $('#value').css("display","none");
+            $scope.value = false;
+            $('#HeroDetail').css("display","block");
+            },(err)=>{
+                
+                if (err.code === 'AUTHENTICATION_FAILURE') {
+                    swal('', 'Invalid credentials');
+                }
+                else {
+                    swal('', 'Unknown error');
+                }
+
+            });
+    }
     $scope.parseJSONhero =function(choose){
         switch(choose){
             case "Assassin":
