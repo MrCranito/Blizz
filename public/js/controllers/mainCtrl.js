@@ -57,6 +57,7 @@ function MainController($scope, $http) {
                     }
             });
             $scope.HTOSArray = Array;
+            console.log($scope.HTOSArray);
             //var test = $scope.HTOSArray.talents;
             //$scope.HTOSArray.icon_url = $scope.HTOSArray.talents.icon_url["92x93"];
        
@@ -253,10 +254,8 @@ function MainController($scope, $http) {
 
     $scope.D3allDataPlayer = function () {
     console.log("clicked");
-    if($scope.battletagName && $scope.battletagID){
-        $scope.battletag = $scope.battletagName+'-'+$scope.battletagID;
-    }
-        $http.get('https://eu.api.battle.net/d3/profile/'+$scope.battletag+'/?'+$scope.localRegion+'&apikey=whj5bzdx57r9ns8c9et49gg332aegepq').then((result) =>{
+    
+        $http.get('https://eu.api.battle.net/d3/profile/'+ $scope.battletagName+'-'+$scope.battletagID+'/?locale=fr_FR&apikey=whj5bzdx57r9ns8c9et49gg332aegepq').then((result) =>{
             console.log("GET DIABLO 3 Personnal Player Infos =>>>>>>>>>>"+JSON.stringify(result));
             },(err)=>{
                 
@@ -332,12 +331,7 @@ function MainController($scope, $http) {
 
 
     $scope.OVWTPlayerData = function () {
-    console.log("clicked");
-    if($scope.battletagName && $scope.battletagID){
-        $scope.battletag = $scope.battletagName+'-'+$scope.battletagID;
-    }
-
-        $http.get('https://owapi.net/api/v3/u/'+$scope.battletag+'/blob').then((result) =>{
+        $http.get('Overwatch/profile/'+$scope.battletagName+'/'+$scope.battletagID+'').then((result) =>{
             console.log("allmaps=>>>>>>>>>>"+JSON.stringify(result));
             },(err)=>{
                 
