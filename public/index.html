@@ -228,6 +228,11 @@
                 <div class="card-block">
                   <h4 class="card-title">{{ item.PrimaryName }}</h4>
                   
+          <div class="container" id="containerButtonChooseHero" >
+                      <button ng-click="parseJSONhero()">All</button>
+                      <button ng-click="parseJSONhero(choose)" ng-repeat="choose in ArrayChooseHero"> {{choose}} </button>
+          
+            </div>
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">{{ item.Group}}</li>

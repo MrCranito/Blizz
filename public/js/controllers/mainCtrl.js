@@ -39,6 +39,29 @@ function MainController($scope, $http) {
 
             });
     };
+    $scope.parseJSONhero =function(choose){
+        switch(choose){
+            case "Assassin":
+            $('.Assassin').parent().css("display","flex");
+            $('.Support,.Warrior,.Specialist').parent().css("display","none");
+            break;
+            case "Warrior":
+            $('.Warrior').parent().css("display","flex");
+            $('.Support,.Assassin,.Specialist').parent().css("display","none");
+            break;
+            case "Support":
+            $('.Support').parent().css("display","flex");
+            $('.Warrior,.Assassin,.Specialist').parent().css("display","none");
+            break;
+            case "Specialist":
+            $('.Specialist').parent().css("display","flex");
+            $('.Support,.Assassin,.Warrior').parent().css("display","none");
+            break;
+            default: 
+            $('.Assassin,.Support,.Warrior,.Specialist').parent().css("display","flex");
+            break;
+            
+        }
     $scope.HTOSallMaps = function () {
     console.log("clicked");
         Array = [];
