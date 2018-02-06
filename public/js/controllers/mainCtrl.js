@@ -99,6 +99,8 @@ function MainController($scope, $http) {
             break;
             
         }
+
+    }
     $scope.HTOSallMaps = function () {
     console.log("clicked");
         Array = [];

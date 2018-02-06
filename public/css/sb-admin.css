@@ -14,6 +14,28 @@ header {
 	float: left ! important;
 }
 
+.col-4{
+	float: left;
+}
+
+.Personnal-col {
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: 35%;
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.Personnal-col .card-block{
+	height: 100px;
+}
+
+#HeroDetail{
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: 35%;
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
 .sing-in {
 	background-color: #f8f9fa;
 	color: black;
@@ -28,6 +50,30 @@ header {
 button{
 	margin-top: 20px;
 	width: 300px;
+}
+
+.Support{
+	border : 2px green solid;
+	margin: 20px 20px 20px 20px;
+}
+
+.Assassin{
+	border : 2px red solid;
+	margin: 20px 20px 20px 20px;
+}
+
+.Warrior{
+	border : 2px blue solid;
+	margin: 20px 20px 20px 20px;
+}
+
+.Specialist{
+	border : 2px yellow solid;
+	margin: 20px 20px 20px 20px;
+}
+.Multiclass{
+		border : 2px yellow solid;
+	margin: 20px 20px 20px 20px;
 }
 
 .widthed{
