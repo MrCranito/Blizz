@@ -155,8 +155,15 @@ function MainController($scope, $http) {
     console.log("clicked");
         Array = [];
         $http.get('https://api.hotslogs.com/Public/Data/Maps').then((result) =>{
+            result.data.forEach((row)=>{
+                    if(row.PrimaryName == "Checkpoint: Hanamura"){
+                        row.PrimaryName = "Checkpoint Hanamura";
+                    }
+                        row.icon_url =  "/img/" +row.PrimaryName+".jpg";
+                    
+            });
             $scope.Maps = result.data;
-            console.log(result.data);
+            console.log($scope.Maps);
             $('#Dashboard').css("display","none");
             $('#Personnal').css("display","none");
             $('#Maps').css("display","block");
