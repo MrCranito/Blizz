@@ -1,22 +1,13 @@
 {
   "salt_rounds": 10,
-  "secret": "mysupersecret",
+  "secret": "victormoreau",
   "auth_time": 24,
   "origin": "*",
   "progresql": {
-    "host": "packy.db.elephantsql.com",
-    "port": "5432",
-    "user": "junubvyl",
-    "password": "46hK2Q7TwjNgMlLWKJzc-N5rosFWKwiG",
-    "database": "junubvyl"
-  },
-  "elephantSQL": {
-    "host":"postgres://junubvyl:46hK2Q7TwjNgMlLWKJzc-N5rosFWKwiG@packy.db.elephantsql.com:5432/junubvyl"
-  },
-  "mariaDB": {
-    "host": "159.8.90.156",
-    "username": "exploreit",
-    "port": 3306,
-    "password": "Wits#WrettisInVuAmji"
+    "host": "",
+    "port": "",
+    "user": "",
+    "password": "",
+    "database": ""
   }
 }

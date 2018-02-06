@@ -1,14 +1,13 @@
 "use strict";
 /*eslint-env node*/
 //------------------------------------------------------------------------------
-// node.js starter application for Bluemix
+// node.js starter Heroes of storm Data
 //------------------------------------------------------------------------------
 
 var settings = require('./settings');
 
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
-var cfenv = require('cfenv');
 
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
@@ -34,23 +33,9 @@ var errorHandler = require('./middlewares/error-handler');
 
 var requireDir = require('require-dir');
 
-// get the app environment from Cloud Foundry
-var appEnv = cfenv.getAppEnv();
-
 // create a new express server
 var app = express();
 
-// set powered-by app name
-app.use(poweredBy());
-
-// controls browser DNS prefetching
-app.use(helmet.dnsPrefetchControl());
-
-// prevents clickjacking
-app.use(helmet.frameguard());
-
-// sets X-Download-Options for IE8+
-app.use(helmet.ieNoOpen());
 
 // set the socket
 app.use((req,res,next) => {
@@ -87,7 +72,6 @@ app.use(express.static('./public'));
 
 
 // disable cache for server request
-app.use(helmet.noCache());
 
 // BodyParser
 // The limit of the request/response

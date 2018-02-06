@@ -1,14 +1,12 @@
 applications:
 - path: .
-  memory: 256M
-  instances: 1
-  domain: eu-gb.mybluemix.net
-  name: QRComm
-  host: QRComm
-  disk_quota: 1024M
-  command: null
+  memory:
+  instances: 
+  domain: 
+  name: 
+  host: 
+  disk_quota: 
+  command:
   services:
-  - ElephantSQL-qrcomm
-  - performance-monitoring-auto - All
-  - Monitoring and Analytics-All
+
 
