@@ -77,7 +77,33 @@ function MainController($scope, $http) {
         Array=[];
         $http.get('https://hotsapi.net/api/v1/heroes/'+HeroAskedForDeatils+'').then((result) =>{
             $scope.DetailsHero = result.data;
+            Array = $scope.DetailsHero;
             $scope.DetailsHero.icon_url= $scope.DetailsHero.icon_url["92x93"];
+            switch($scope.DetailsHero.name){
+                    // row.icon_url = "/img/" + row.name + ".jpg";
+                        case "Junkrat":
+                        $scope.DetailsHero.icon_url = "/img/Junkrat.jpg";
+                        break;
+                        case "Alexstrasza":
+                        $scope.DetailsHero.icon_url = "/img/Alexstrasza.jpg";
+                        break;
+                        case "Zul'jin":
+                        $scope.DetailsHero.icon_url = "/img/Zul'jin.png";
+                        break;
+                        case "The Butcher":
+                        $scope.DetailsHero.icon_url = "/img/The Butcher.jpg";
+                        break;
+                        case "Hanzo":
+                        $scope.DetailsHero.icon_url = "/img/Hanzo.png";
+                        break;
+                        case "Maiev":
+                        $scope.DetailsHero.icon_url = "/img/Maiev.png";
+                        break;
+                        case "Blaze":
+                        $scope.DetailsHero.icon_url = "/img/Blaze.png";
+                        break;
+                    };
+            
             Array = $scope.DetailsHero.talents;
              Array.forEach((row)=>{
                     row.icon_url = row.icon_url["64x64"];
