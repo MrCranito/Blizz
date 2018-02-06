@@ -24,7 +24,6 @@
  <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
         <a class="navbar-brand" href="#">BLIZZARD STATS</a>
-        <a class="btn btn-primary widthed sing-in" href="#">Sign In</a>
       </div>
     </nav>
 
@@ -62,7 +61,7 @@
               <div class="game-container">
                 <h2> Heroes</h2>
               <div class="col-12 " style="padding : 0px">
-                <button ng-click="HTOSplayerData()" type="submit" style="margin : 0 auto; padding-right : 0px;margin-top : 50px " class="btn btn-block btn-lg btn-primary widthed">Heroes Of Storm Player All</button>
+                <button id="player"ng-click="HTOSplayerData()" type="submit" style="margin : 0 auto; padding-right : 0px;margin-top : 50px " class="btn btn-block btn-lg btn-primary widthed">Heroes Of Storm Player All</button>
               </div>
               
 
@@ -72,7 +71,7 @@
                   
                 </div>
                 <div class="col-12 ">
-                  <button ng-click="HTOSallHeroes()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Heroes Of Storm Data Heroes</button>
+                  <button id="Heroe" ng-click="HTOSallHeroes()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Heroes Of Storm Data Heroes</button>
                 </div>
               </div>
 
@@ -82,139 +81,12 @@
                   
                 </div>
                 <div class="col-12 ">
-                  <button ng-click="HTOSallMaps()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Heroes Of Storm Data Maps</button>
+                  <button id="map" ng-click="HTOSallMaps()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Heroes Of Storm Data Maps</button>
                 </div>
               </div>
               </div>
             </div>
 
-
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 wow">
-              <div class="game-container">
-              <h2> WOW </h2>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <input ng-model="serverWOW" type="text" class="form-control form-control-lg" placeholder="Enter your Server">
-                  <input ng-model="heronameWoW" type="text" class="form-control form-control-lg" placeholder="Enter your Hero's Name">
-                  <button ng-click="WOWPlayerData()" type="submit" class="btn btn-block btn-lg btn-primary widthed">WOW Player Data </button>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="WOWPlayerDataPlayerAchievement()" type="submit" class="btn btn-block btn-lg btn-primary widthed">WOW Player Achievement </button>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="WOWPlayerGuild()" type="submit" class="btn btn-block btn-lg btn-primary widthed">WOW Player Guild </button>
-                </div>
-              </div>
-              </div>
-            </div>
-
-
-            <div class="col-sm-14 col-md-6 col-lg-4 col-xl-4 d3">
-              <div class="game-container">
-              <h2> DIablo 3</h2>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="D3allDataPlayer()" type="submit" class="btn btn-block btn-lg btn-primary widthed"> D3 Data Player </button>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="D3DataByHeroes()" type="submit" class="btn btn-block btn-lg btn-primary widthed">D3 Player Heroes </button>
-                </div>
-              </div>
-            </div>
-            </div>
-
-
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-6 starcraft">
-              <div class="game-container">
-              <h2> Starcraft</h2>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="STC2ProfilPlayer()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Starcraft 2 Player Data</button>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="STC2PlayerMatchHistory()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Starcraft 2 Match History</button>
-                </div>
-              </div>
-
-
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="STC2ProfilPlayer()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Starcraft 2 Player Data</button>
-                </div>
-              </div>
-              </div>
-            </div>
-
-
-
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-6 overwatch">
-            <div class="game-container">
-            <h2> Overwatch</h2>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="OVWTPlayerData()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Overwatch Player Data</button>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="OVWTPlayerStat()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Overwatch Player Stats</button>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  
-                </div>
-                <div class="col-12 ">
-                  <button ng-click="OVWTPlayersStatsHeroes()" type="submit" class="btn btn-block btn-lg btn-primary widthed">Overwatch Player Data By Heroes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         
             </form>
         
@@ -242,7 +114,7 @@
           </div>
         </div>
 
-        <div class="container" id="Personnal">
+        <div class="container" id="Personnal"style="display:none">
           <div class="col-4  Personnal-col">
               <div class="card" style="width: 20rem;" >
                   <!--<img class="card-img-top" alt="Card image cap">-->
@@ -261,7 +133,7 @@
           </div>
         </div>
 
-        <div class="container" id="Maps">
+        <div class="container" id="Maps" style="display:none">
             <h1> Maps</h1>
               <div class="col-4" ng-repeat="maps in Maps">
                   <div class="card" style="width: 20rem;" >
@@ -276,8 +148,8 @@
               </div>
         </div>
 
-        <div class="container" id="HeroDetail">
-              <div class="col-4">
+        <div class="container" id="HeroDetail" style="display:none">
+              <div class="col-md-4">
                   <div class="card" style="width: 20rem;" >
                   <!--<img class="card-img-top" alt="Card image cap">-->
                   <div class="card-block">
@@ -327,14 +199,26 @@
 
 </html>
     
-  <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
     <!-- Bootstrap core JavaScript-->
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Page level plugin JavaScript-->
+    <script>
+      $( "#player" ).click(function() {
+        $("#Personnal").css("display","block");
+      });
+      $( "#map" ).click(function() {
+        $("#maps").css("display","block");
+      });
+      $( "#Heroe" ).click(function() {
+        $("#HeroDetail").css("display","block");
+      });
     
+    
+    </script>
      <script src="js/controllers/mainCtrl.js"></script>
      <script type="text/javascript" src="js/core.js" script>
 
