@@ -43,16 +43,14 @@
             <form>
               <div class="form-row">
                 <div class="col-12 col-md-12 mb-2 mb-md-0">
-                  <input ng-model="battletagName" type="text" class="form-control form-control-lg" placeholder="Enter your battletagName" style="margin-bottom : 30px">
-                  <input ng-model="battletagID" type="text" class="form-control form-control-lg" placeholder="Enter your battletagID" style="margin-bottom : 30px">
+                  <input ng-model="battletagName" type="text" class="form-control form-control-lg" placeholder="Enter your battletagName" style="margin-bottom : 30px;float: left;width: 50%">
+                  <input ng-model="battletagID" type="text" class="form-control form-control-lg" placeholder="... battletagID" style="margin-left: 50px; width: 20%; float: left;">
                   <select ng-model="localRegion"> 
-                          <option value="fr_Fr"> FR </option>
+                          <option value="fr_Fr" selected> FR </option>
                           <option value="en_EN"> EN</option>
-
-
                  </select>
                  <select ng-model="Region"> 
-                          <option value="2"> EU </option>
+                          <option value="2" selected> EU </option>
                           <option value="1"> US </option>
                           <option value="3"> KR</option>
 
